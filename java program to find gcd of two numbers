@@ -1,0 +1,28 @@
+import java.util.*;
+
+class A{
+    
+    static int min(int a,int b){
+        if(a<b) return a;
+        else return b;
+    }
+    static int gcd(int n1,int n2){
+        int w=1;
+        for(int i=1;i<=min(n1,n2);i++){
+            if(n1%i==0&&n2%i==0){
+                if(w<i) w=i;
+            }
+        }
+        return w;
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int t=s.nextInt();
+        for(int q=0;q<t;q++){
+            int n1=s.nextInt();
+            int n2=s.nextInt();
+            System.out.println(gcd(n1,n2));
+            
+        }
+    }
+}
